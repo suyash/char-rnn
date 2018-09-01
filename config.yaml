@@ -1,0 +1,4 @@
+trainingInput:
+  scaleTier: BASIC_GPU
+  runtimeVersion: '1.9'
+  pythonVersion: '3.5'

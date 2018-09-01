@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+    <style>
+        body {
+            color: #222;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        main {
+            max-width: 80%;
+            min-width: 6rem;
+            margin: 0 auto;
+            padding-top: 2rem;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        #controls {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .controlgroup {
+            display: flex;
+            align-items: center;
+        }
+
+        .controlgroup button {
+            margin: 0 1rem;
+        }
+
+        #speedControl {
+            flex-direction: row-reverse;
+        }
+
+        #predictionContainer {
+            padding-left: 2rem;
+            border-left: 2px solid royalblue;
+        }
+
+        #predictionContainer.editable {
+            border-left-color: lightgreen;
+        }
+
+        #prediction {
+            font-family: "Nothing You Could Do", cursive;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+        }
+
+        footer a {
+            color: royalblue;
+            text-decoration: none;
+            line-height: 1.5rem;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <p id="loadingMessage">Loading Model</p>
+            <div id="controls" class="hidden">
+                <div id="speedControl" class="controlgroup">
+                    <input id="speedControlSlider" type="range" name="speed" min="1" max="40">
+                    <label for="speedControlSlider">speed</label>
+                </div>
+                <div class="controlgroup">
+                    <button>Start</button>
+                </div>
+            </div>
+        </header>
+        <section id="predictionContainer" class="editable hidden">
+            <pre id="prediction" contenteditable="true"></pre>
+        </section>
+        <footer>
+            <a href="https://github.com/suyash/char-rnn" target="_blank" rel="noopener">src</a>
+        </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.6"> </script>
+    <script src="./index.js"></script>
+</body>
+</html>
