@@ -39,7 +39,7 @@ async function main(): Promise<void> {
         model = await tf.loadModel("indexeddb://model_shakespeare");
         log("loaded from idb");
     } catch (err) {
-        model = await tf.loadModel("/model/shakespeare/v1/model.json");
+        model = await tf.loadModel("model/shakespeare/v1/model.json");
         const result: tf.io.SaveResult = await model.save("indexeddb://model_shakespeare");
         log("saving to idb:", result);
     }
