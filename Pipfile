@@ -4,10 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
-tensorflowjs = "*"
 pylint = "*"
+tensorflowjs = "*"
 
 [packages]
+tensorflow = "==1.9"
 
 [requires]
 python_version = "3.5"
