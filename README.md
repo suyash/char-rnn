@@ -1,5 +1,11 @@
 # char-rnn
 
+Small character-based language model implementation in TensorFlow with tf.data and keras APIs along with a browser demo using TensorFlow.js.
+
+The task file takes hidden state sizes as a parameter and generates a neural network with stateful GRU cells of the specified layer sizes.
+
+### Running
+
 ```
 pipenv run python trainer/task.py \
   --train-files $DATA_DIR \
@@ -9,6 +15,14 @@ pipenv run python trainer/task.py \
   --job-dir $OUTPUT_DIR \
   --export-dir $OUTPUT_DIR
 ```
+
+### Other Art
+
+- https://github.com/martin-gorner/tensorflow-rnn-shakespeare
+
+- https://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+- https://arxiv.org/abs/1506.02078
 
 ### TODO
 
