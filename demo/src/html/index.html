@@ -67,12 +67,12 @@
             flex-direction: column;
             align-items: center;
             margin: 2rem 0;
+            line-height: 1.5rem;
         }
 
         footer a {
             color: royalblue;
             text-decoration: none;
-            line-height: 1.5rem;
         }
 
         footer a:hover {
@@ -98,7 +98,12 @@
             <pre id="prediction" contenteditable="true"></pre>
         </section>
         <footer>
-            <a href="https://github.com/suyash/char-rnn" target="_blank" rel="noopener">src</a>
+            <p>
+                This is a demo for a character based language model trained on shakespeare plays with a single GRU layer of hidden state size 64 (open devtools console to see model details). Initially the text is editable, clicking "Start" freezes the text and starts predicting the next character using the model.
+            </p>
+            <p>
+                <a href="https://github.com/suyash/char-rnn" target="_blank" rel="noopener">src</a>
+            </p>
         </footer>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.6"> </script>
