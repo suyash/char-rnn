@@ -7,7 +7,7 @@ The task file takes hidden state sizes as a parameter and generates a neural net
 ### Running
 
 ```
-pipenv run python trainer/task.py \
+python trainer/task.py \
   --train-files $DATA_DIR \
   --epochs 100 \
   --steps-per-epoch 100 \
